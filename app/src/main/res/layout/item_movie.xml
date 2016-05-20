@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools">
+
+  <ImageView
+    android:layout_width="@dimen/poster_width"
+    android:layout_height="@dimen/poster_height"
+    android:id="@+id/ivMovieImage"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    tools:src="@mipmap/ic_launcher"/>
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/ivMovieImage"
+    android:layout_toEndOf="@+id/ivMovieImage"
+    android:layout_alignBottom="@+id/ivMovieImage"
+    android:gravity="center_vertical"
+    android:layout_margin="10dp">
+
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      tools:text="Captain America: Civil War"
+      android:id="@+id/tvDetailTitle"
+      android:layout_alignParentTop="true"
+      android:layout_toRightOf="@+id/ivMovieImage"
+      android:layout_toEndOf="@+id/ivMovieImage"
+      android:gravity="center"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      tools:text="Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies."
+      android:id="@+id/tvDetailOverview"
+      android:layout_below="@+id/tvDetailTitle"
+      android:layout_toRightOf="@+id/ivMovieImage"
+      android:layout_toEndOf="@+id/ivMovieImage"
+      android:layout_alignBottom="@+id/ivMovieImage"
+      android:ellipsize="end"
+      android:maxLines="4"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"/>
+  </LinearLayout>
+
+</RelativeLayout>

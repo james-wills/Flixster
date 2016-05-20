@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  tools:context="com.example.james_wills.flixster.DetailActivity"
+  android:padding="0dp">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      tools:text="Captain America: Civil War"
+      android:text="Large Text"
+      android:id="@+id/tvDetailTitle"
+      android:textSize="25dp"
+      android:textColor="@color/black"
+      android:singleLine="false"
+      android:layout_below="@+id/rbPopularity"
+      android:layout_centerHorizontal="true"/>
+
+    <RatingBar
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:theme="@style/RatingBar"
+      android:id="@+id/rbPopularity"
+      android:numStars="5"
+      android:isIndicator="true"
+      android:rating="2.5"
+      android:layout_below="@+id/backdropLayout"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"/>
+
+    <RelativeLayout tools:context="com.example.james_wills.flixster.DetailActivity"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/backdropLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:padding="0dp">
+
+      <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivBackdrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/largebackdropplaceholder"
+        android:adjustViewBounds="true"/>
+
+      <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibPlayButton"
+        android:src="@drawable/playiconshadow"
+        android:background="#00000000"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+  </RelativeLayout>
+
+  <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/svDescription"
+    android:layout_below="@+id/backdropLayout"
+    android:layout_weight="1">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/rlInformationLayout"
+      android:layout_below="@+id/backdropLayout"
+      android:padding="20dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies."
+        android:id="@+id/tvDetailOverview"
+        android:layout_margin="10dp"
+        />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Release Date:"
+        android:id="@+id/tvReleaseDateLabel"
+        android:layout_below="@+id/tvDetailOverview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tvReleaseDate"
+        android:layout_alignTop="@+id/tvReleaseDateLabel"
+        android:layout_toRightOf="@+id/tvReleaseDateLabel"
+        android:layout_toEndOf="@+id/tvReleaseDateLabel"/>
+    </RelativeLayout>
+  </ScrollView>
+
+</LinearLayout>
