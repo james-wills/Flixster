@@ -37,7 +37,9 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 [gif1: Portrait walkthrough](https://media.giphy.com/media/xT4uQqUn7A3NuE3ZM4/giphy.gif)
+
 [gif2: Landscape walkthrough](https://media.giphy.com/media/xT4uQ7oGbLkSIKRRRu/giphy.gif)
+
 [gif3: youtube video walkthrough](https://media.giphy.com/media/3o6EhVDktLPqTKjB8k/giphy.gif)
 
 (YouTube had to be tested on a real device because I didn't want to install it on my emulator.)
